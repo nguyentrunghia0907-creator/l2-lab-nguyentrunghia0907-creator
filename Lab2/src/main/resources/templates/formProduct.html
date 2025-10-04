@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab 2 - Bài 4</title>
+</head>
+<body>
+    <form action="/product/save" method="post">
+        <input name="name"><br>
+        <input name="price"><br>
+        <button>Save</button>
+    </form>
+    <p>Tên sản phẩm số 1: <span th:text="${product1.name}"></span></p>
+    <p>Giá sản phẩm số 1: <span th:text="${product1.price}"></span></p>
+    <hr>
+    <p>Tên sản phẩm số 2: <span th:text="${product2.name}"></span></p>
+    <p>Giá sản phẩm số 2: <span th:text="${product2.price}"></span></p>
+    <hr>
+    <th:block th:each="item: ${items}">
+        <p>Tên sản phẩm số 3: <span th:text="${item.name}"></span></p>
+        <p>Giá sản phẩm số 3: <span th:text="${item.price}"></span></p>
+    </th:block>
+
+</body>
+</html>
