@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en" th:replace="~{/layout::view(~{::title}, ~{::article})}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title th:text="#{menu.about}">Giới thiệu</title>
+</head>
+<body>
+    <article>
+        <h1 th:text="#{menu.about}">Giới thiệu</h1>
+        <ul>
+            <li><h3>FPT Polytechnic</h3></li>
+            <li><h3>Thực học - Thực nghiệp</h3></li>
+        </ul>
+    </article>
+</body>
+</html>
