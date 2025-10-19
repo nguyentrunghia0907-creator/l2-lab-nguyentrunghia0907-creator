@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab 8 - Bài 4</title>
+</head>
+<body>
+<i th:text="${message}">Error message</i>
+<form action="/auth/login" method="post">
+    <label>Username:</label>
+    <input name="username">
+    <br>
+    <label>Password:</label>
+    <input name="password" type="password">
+    <hr>
+    <button>Login</button>
+</form>
+</body>
+</html>
