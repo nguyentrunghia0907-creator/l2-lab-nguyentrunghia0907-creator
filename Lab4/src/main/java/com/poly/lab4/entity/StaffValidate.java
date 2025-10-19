@@ -1,7 +1,8 @@
 package com.poly.lab4.entity;
 
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
-import lombok.AllArgsConstructor;
+        import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -34,7 +35,7 @@ public class StaffValidate {
 
     @Min(value = 1000, message = "Lương tối thiểu phải là 1000")
     @NotNull(message = "Chưa nhập lương")
-    private Double salary ;
+    private String salary ;
 
     private Integer level ;
 }
