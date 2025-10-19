@@ -12,4 +12,8 @@ public class Item {
     String name;
     double price;
     int qty = 1;
+
+    public Double getAmount(){
+        return qty * price;
+    }
 }

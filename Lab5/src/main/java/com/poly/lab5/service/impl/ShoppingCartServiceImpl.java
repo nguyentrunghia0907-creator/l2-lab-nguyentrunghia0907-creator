@@ -8,7 +8,6 @@ import org.springframework.web.context.annotation.SessionScope;
 
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @SessionScope
@@ -55,7 +54,7 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
     }
 
     @Override
-    public double getAmout() {
-        return 0;
+    public double getAmount() {
+        return map.values().stream().mapToDouble(i -> i.getPrice() * i.getQty()).sum();
     }
 }

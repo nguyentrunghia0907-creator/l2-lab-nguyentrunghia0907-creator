@@ -17,7 +17,7 @@
             <th>Amount</th>
             <th></th>
         </tr>
-        <tr th:each="item: ${items}">
+        <tr th:each="item: ${cart.items}">
                 <input type="hidden" name="id" th:value="${item.id}">
                 <td th:text="${item.id}"></td>
                 <td th:text="${item.name}"></td>
@@ -27,12 +27,13 @@
                         <input name="qty" th:value="${item.qty}" onblur="this.form.submit()">
                     </form>
                 </td>
-                <td th:text="${item.price * item.qty}"></td>
+                <td th:text="${item.amount}"></td>
                 <td>
                     <a th:href="@{|/cart/remove/${item.id}|}">Remove</a>
                 </td>
         </tr>
     </table>
+    <h3>Tổng tiền: <span th:text="${cart.amount}"></span> USD</h3>
     <a href="/cart/clear">Clear Cart</a>
     <a href="/item/index">Add more</a>
 </body>

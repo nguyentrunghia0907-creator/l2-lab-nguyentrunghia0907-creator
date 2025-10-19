@@ -11,5 +11,5 @@ public interface ShoppingCartService {
     void clear();
     Collection<Item> getItems();
     int getCount();
-    double getAmout();
+    double getAmount();
 }

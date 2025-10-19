@@ -16,7 +16,7 @@ public class ShoppingCartController {
 
     @RequestMapping("/cart/view")
     public String view(Model model){
-        model.addAttribute("items", cart.getItems());
+        model.addAttribute("cart", cart);
         return "cart/index";
     }
 
