@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search By DSL</title>
+</head>
+<body>
+<form action="/product/searchByDSL" method="post">
+    <input name="min" th:value="${param.min}" placeholder="Min Price?">
+    <input name="max" th:value="${param.max}" placeholder="Max Price?">
+    <button>Search</button>
+</form>
+<table border="1" style="width:100%">
+    <th:block var="item" th:each = "item:${items}">
+        <tr>
+            <td th:text="${item.id}"></td>
+            <td th:text="${item.name}"></td>
+            <td th:text="${item.price}"></td>
+            <td th:text="${item.createDate}"></td>
+        </tr>
+    </th:block>
+</table>
+</body>
+</html>
