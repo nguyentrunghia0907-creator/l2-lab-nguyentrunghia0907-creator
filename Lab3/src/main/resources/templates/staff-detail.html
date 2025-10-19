@@ -9,7 +9,7 @@
 </head>
 <body>
     <div>
-        <img th:src="@{|/static/${staff.photo}|}"><hr>
+        <img th:src="@{'/images/' + ${staff.photo}}" style="width:50%"><hr>
         Email:
         <b th:text="${staff.id}"></b><hr>
         Họ và tên:
